@@ -1,0 +1,237 @@
+:root {
+  --primary: rgb(13, 13, 109);
+  --secondary: skyblue;
+  --linkshover: brown;
+  --tertiary: rgb(133, 70, 70);
+  --shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.575);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.btn {
+  background: var(--tertiary);
+  padding: 10px 15px;
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: white;
+  color: black;
+  transform: scale(
+    1.1
+  ); /*this will make font bigger without affecting DOM flow. */
+}
+
+/* <!-- global message --> */
+.global {
+  background-color: var(--secondary);
+  padding: 10px 0;
+}
+.global > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* <!-- header section --> */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  background: white;
+  color: var(--primary);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo div {
+  border: 2px dotted var(--primary);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navlinks {
+  list-style-type: none;
+  display: flex;
+}
+.navlinks > li {
+  margin-left: 1rem;
+}
+.navlinks > li:hover {
+  color: var(--linkshover);
+  border-radius: 20%;
+  cursor: pointer;
+  padding: 1px;
+  text-decoration: underline;
+  transform: scale(1.5);
+  margin-left: 10px;
+}
+/* <!-- hero section  --> */
+.hero {
+  height: 60vh;
+  background: url("./assets/e.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content {
+  color: white;
+  /* height: 60vh; */
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: #00000096;
+}
+.hero-content h1,
+hr,
+p {
+  margin: 8px;
+}
+.hero-content hr {
+  width: 100%;
+}
+
+/* <!-- lastest post section --> */
+.latest {
+  padding: 3rem 0;
+  background: url("./assets/c.jpg") no-repeat center;
+  block-size: cover;
+  filter: grayscale(0.4);
+}
+.latest-title {
+  color: white;
+}
+.main {
+  display: flex;
+  gap: 1rem;
+}
+.articles {
+  width: 66%;
+}
+article {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow);
+  background: rgba(190, 186, 186, 0.822);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 20px 16px;
+}
+article .art-img {
+  width: 350px;
+}
+.art-title {
+  font-weight: bold;
+}
+article .btn {
+  float: right;
+}
+.side-links {
+  width: 34%;
+}
+.country {
+  background: rgba(171, 207, 97, 0.616);
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+.country ul {
+  margin-left: 2rem;
+}
+.bydate {
+  background: rgba(201, 209, 94, 0.616);
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.bydate ul {
+  margin-left: 2rem;
+}
+/* <!-- Recommandation --> */
+.recommandation {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.recommandation .cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.recommandation .card {
+  width: 250px;
+  border: 1px solid rgba(255, 145, 0, 0.452);
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  flex-grow: 1;
+}
+.recommandation .card img {
+  border-radius: 15px 15px 0 0;
+}
+
+.card-title,
+.card-text {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.card-btn {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+.card-content {
+  padding: 16px;
+}
+
+/* <!-- subscribe section  --> */
+.subs {
+  background: var(--secondary);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subs input {
+  line-height: 42px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.548);
+}
+
+/* <!-- footer --> */
+footer {
+  background: #000;
+  color: white;
+  padding: 66px;
+  text-align: center;
+}
