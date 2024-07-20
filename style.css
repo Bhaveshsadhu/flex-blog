@@ -171,7 +171,7 @@ article .btn {
 .bydate {
   background: rgba(201, 209, 94, 0.616);
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 5px;
 }
 .bydate ul {
@@ -234,4 +234,86 @@ footer {
   color: white;
   padding: 66px;
   text-align: center;
+}
+
+/* Media Query */
+/* adjust width for bigger screen */
+@media (min-width: 992px) {
+  .recommandation .card {
+    width: 20%;
+  }
+}
+/* Ipad view */
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .articles {
+    width: 100%;
+  }
+  /* .art-content {
+    font-size: 1.5rem;
+  } */
+  aside {
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .side-links {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .country {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .bydate {
+    width: 100%;
+  }
+  .recommandation .card {
+    width: 44%;
+  }
+}
+
+/* Phone views */
+@media (max-width: 550px) {
+  .articles {
+    display: flex;
+    flex-direction: column;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  article .art-img {
+    width: 100%;
+  }
+  .side-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+  }
+  .subs div {
+    display: flex;
+    flex-direction: column;
+  }
+  .subs div form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 1rem;
+  }
+  .btn {
+    width: 100%;
+  }
+  .recommandation .card {
+    width: 100%;
+  }
 }
